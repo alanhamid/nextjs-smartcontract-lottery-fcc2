@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 import Header from "../components/Header"
 import LotteryEntrance from "../components/LotteryEntrance"
 import { useMoralis } from "react-moralis"
-import { web3uikit } from "web3uikit"
+// import { web3uikit } from "web3uikit"
 
 const supportedChains = ["31337", "4"]
 
