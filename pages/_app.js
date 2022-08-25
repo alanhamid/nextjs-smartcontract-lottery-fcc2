@@ -1,13 +1,16 @@
 import { MoralisProvider } from "react-moralis"
+import { NotificationProvider } from "web3uikit"
 import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }) {
     return (
         <MoralisProvider
-            appId="process.env.MORALIS_APP_ID"
-            serverUrl="process.env.MORALIS_RPC_RPC_URL"
+            serverUrl={process.env.MORALIS_RPC_URL}
+            appId={process.env.MORALIS_APP_ID}
         >
-            <Component {...pageProps} />
+            <NotificationProvider>
+                <Component {...pageProps} />
+            </NotificationProvider>
         </MoralisProvider>
     )
 }

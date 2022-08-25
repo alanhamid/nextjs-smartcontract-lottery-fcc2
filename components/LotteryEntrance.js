@@ -6,19 +6,7 @@ import { useNotification } from "web3uikit"
 import { ethers } from "ethers"
 
 export default function LotteryEntrance() {
-    const {
-        Moralis,
-        isWeb3Enabled,
-        chainId: chainIdHex,
-    } = (
-        <MoralisProvider
-            appId="process.env.MORALIS_APP_ID"
-            serverUrl="process.env.MORALIS_RPC_RPC_URL"
-        >
-            useMoralis()
-        </MoralisProvider>
-    )
-
+    const { Moralis, isWeb3Enabled, chainId: chainIdHex } = useMoralis()
     // These get re-rendered every time due to our connect button!
     const chainId = parseInt(chainIdHex)
     // console.log(`ChainId is ${chainId}`)
