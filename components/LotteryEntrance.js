@@ -108,7 +108,7 @@ export default function LotteryEntrance() {
 
     return (
         <div className="p-5">
-            <h1 className="py-4 px-4 font-bold text-3xl">Lottery</h1>
+            <h1 className="py-4 px-4 font-bold text-3xl">Daily Jackpot</h1>
             {raffleAddress ? (
                 <>
                     <button
@@ -126,12 +126,12 @@ export default function LotteryEntrance() {
                         {isLoading || isFetching ? (
                             <div className="animate-spin spinner-border h-8 w-8 border-b-2 rounded-full"></div>
                         ) : (
-                            "Enter Raffle"
+                            "Play"
                         )}
                     </button>
                     <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")} ETH</div>
                     <div>The current number of players is: {numberOfPlayers}</div>
-                    <div>The most previous winner was: {recentWinner}</div>
+                    <div>The most recent winner was: {recentWinner}</div>
                 </>
             ) : (
                 <div>Please connect to a supported chain </div>
